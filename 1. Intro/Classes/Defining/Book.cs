@@ -5,7 +5,10 @@ namespace Defining
     // clases necesitan nombres unicos dentro del namespace
     public class Book
     {
+
+        
         // TODO: classes tienen variables member, or "fields" to hold data
+        
 
 
 
