@@ -5,10 +5,16 @@ namespace Defining
     // clases necesitan nombres unicos dentro del namespace
     public class Book
     {
+
+        
         // TODO: classes tienen variables member, or "fields" to hold data
+<<<<<<< HEAD
+        
+=======
         string _title;
         string _author;
         int _pages;
+>>>>>>> 7716e87d477ba021e47d1ea7266a66e29914680e
 
 
 

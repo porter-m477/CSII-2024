@@ -8,7 +8,11 @@ namespace Defining
         {
             // TODO: Crear new object instances usando el "new" operator
             Book book1 = new Book("Harry Potter", "JK Rowling", 400);
+<<<<<<< HEAD
+            Book book2 = new Book("Lord of the Rings", "Tolkiwn", 700);
+=======
             Book book2 = new Book("Lord of the Rings", "Tolkien", 700);
+>>>>>>> 7716e87d477ba021e47d1ea7266a66e29914680e
 
 
 

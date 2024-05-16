@@ -33,11 +33,16 @@ namespace Modifiers
         {
             return _name;
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7716e87d477ba021e47d1ea7266a66e29914680e
         public void SetName(string name)
         {
             _name = name;
         }
+<<<<<<< HEAD
+=======
 
         public void SetAuthor(string author)
         {
@@ -47,7 +52,15 @@ namespace Modifiers
         {
             _pagecount = count;
         }
+>>>>>>> 7716e87d477ba021e47d1ea7266a66e29914680e
 
-        
-    }
+        public void SetAuthor(string author)
+        {
+            _author = author; 
+        }
+
+        public int SetPagecount(int count )
+        {
+            _pagecount = count;
+        }
 }
