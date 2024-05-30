@@ -21,11 +21,12 @@ Console.WriteLine($"Person 1: {p1.FirstName}");
 
 
 int x = 5, y = 7;
+
 Swap<int>(ref x, ref y);
 
 Console.WriteLine($"X: {x} and Y: {y}");
 
-//Generics permiten crear metodos que usen cualquier 'Types' sin necesidad de manejar 'objects'
+//Generics permiten crear metodos que usen cualquier 'Types' sin necesidad de manejarlos como 'objects'
 //Como se hace: Especificamos en el metodo esta definicion 
 //de un parametro generico <T> (este es un Type Parameter)
 static void Swap<T>(ref T first, ref T second)
@@ -40,9 +41,9 @@ static void Swap<T>(ref T first, ref T second)
 
 //Metodo funcionaria manejando los argumentos como objects pero ocupa mucha memoria
 
-// static void Swap(ref object first, ref object second)
-// {
-//     object temp = second;
-//     second = first;
-//     first = temp;
-// }
+//static void Swap(ref object first, ref object second)
+//{
+//    object temp = second;
+//    second = first;
+//    first = temp;
+//}

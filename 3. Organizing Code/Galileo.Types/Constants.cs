@@ -1,6 +1,6 @@
 namespace Galileo.Space
 {
-    static class Constants
+    public static class Constants 
     {
         private static string connectionString;
         public static readonly string CONFIG_SERVER_NAME = "Servidor";

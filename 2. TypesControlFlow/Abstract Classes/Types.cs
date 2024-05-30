@@ -20,10 +20,10 @@ public abstract class Employee : IPerson
     //propiedad abstracta
     public abstract int EmployeeId { get; }
 
-    //propiedad derivada
+    //metodo abstracto
     public abstract bool ProcessPayroll();
 
-    //propiedad derivada
+    //metodo virtual
     public virtual void Terminate(DateTime terminationEffectiveDate)
     {
         Console.WriteLine("Contrato terminado");
@@ -60,7 +60,7 @@ public class Manager : Employee, IPerson
     public int NumberOfDirectReports { get; set; }
     public override int EmployeeId { get => new System.Random().Next(1, 100); }
 
-    public override bool ProcessPayroll()
+    public override bool ProcessPayroll() //obligatorio por ser abstracto   
     {
         Console.WriteLine("rol de pago supervisor");
         return true;

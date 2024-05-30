@@ -13,14 +13,14 @@ var employees = new List<Employee>
 };
 
 var filteredEmployees = employees.Where((e) => e.Id > 2).Select(
-    (es)=>new { FirstName = es.FirstName, LastName = es.LastName });
+    (name)=>new { FirstName = name.FirstName, LastName = name.LastName, Id = name.Id });
 
 var fEmployees = from emp in employees
-                 where emp.Id > 2
+                 where emp.Id > 3
                  select new { FirstName = emp.FirstName, LastName = emp.LastName };
 
 foreach (var emp in filteredEmployees)
 {
-    Console.WriteLine(emp.FirstName + " " + emp.LastName);
+    Console.WriteLine(emp.FirstName + " " + emp.LastName + " " + emp.Id);
 }
 

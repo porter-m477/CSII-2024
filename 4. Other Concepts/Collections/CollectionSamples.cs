@@ -11,6 +11,8 @@ namespace Galileo.Library
             var q = new Queue<string>();
             q.Enqueue("firstItem");
             q.Enqueue("secondItem");
+            q.Enqueue("thirdItem");
+            q.Enqueue("fourthItem");
 
             string? item = null;
 
@@ -28,8 +30,11 @@ namespace Galileo.Library
             var stk = new Stack<string>();
             stk.Push("firstItem");
             stk.Push("secondItem");
+            stk.Push("thirdItem");
+            stk.Push("fourthItem");
 
             string? stkItem = null;
+
             Console.WriteLine();
             Console.WriteLine("Using a Stack");
 

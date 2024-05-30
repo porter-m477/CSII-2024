@@ -1,7 +1,9 @@
 ﻿using Galileo.Space; //C#10
 using System;
+using System.Reflection.Metadata; //implementado por defecto
 
-string db = Constants.CONFIG_DB_NAME;
-//string db = Galileo.Space.Constants.CONFIG_DB_NAME;
+Employee em = new ShiftWorker();
 
-Console.WriteLine(db);
+string db = Constants.CONFIG_SERVER_NAME;
+
+Console.WriteLine("String" + db);
