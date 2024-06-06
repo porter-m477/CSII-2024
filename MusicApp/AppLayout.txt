@@ -1,0 +1,18 @@
+DataBase App
+
+Objetivo: Construir una App en C# que se conecta a una base de datos MySQL
+
+- Crear la Base de datos
+- SQL Queries: Hablarle a la base de datos
+    - Lenguaje Declarativo
+    SELECT * FROM albums: para recuperar datos
+    WHERE: para filtrar
+    INSERT: para agregar nuevos datos
+    UPDATE: para cambiar datos existentes
+
+- Front End: C#
+- Conectar la base de datos con el Front End
+- Crear un campo de busqueda desde la App hacia la busqueda
+- Features Siguientes....
+    - Ejemplo: Insertar nuevos records, Borrar o Cambiar
+
