@@ -1,6 +1,6 @@
-namespace Galileo.Space;
+namespace Galileo.Space; //implementado desde C#10
 
-public interface IPerson
+public interface IPerson 
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }

@@ -1,6 +1,6 @@
 namespace Galileo.Space;
 
-public interface IPerson
+public interface IPerson 
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -38,7 +38,11 @@ public class Manager : Employee, IPerson
 {
     public Manager(string firstName, string lastName) : base(firstName, lastName)
     { }
-    public int NumberOfDirectReports { get; set; }
+    public void SetNumberOfDirectReports(int reports)
+    {
+        NumberOfDirectReports = reports;
+    }
+    public int NumberOfDirectReports { get; private set; }
 }
 
 //structs - value types

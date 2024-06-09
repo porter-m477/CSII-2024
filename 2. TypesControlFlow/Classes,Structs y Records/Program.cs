@@ -1,13 +1,19 @@
-﻿namespace Galileo.Space;
+﻿using System.Collections.Concurrent;
+
+namespace Galileo.Space;
 
 //Una interfaz en programación es como un contrato entre diferentes partes de su código. 
 //Imaginenlo como un acuerdo que especifica cómo deberían verse ciertas cosas o cómo deberían comportarse.
-public interface IPerson
+public interface IPerson  //ICustomer, IEmployee, IVendorContact, ISale
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Id { get; set; }
     public Age Age { get; set; }
+
+    void PrintFullName();
+    void PrintAge();
+
 }
 
 //Vamos a usar esa interface para definir esta clase como referencia de IPerson
@@ -18,6 +24,24 @@ public class Employee : IPerson
     public int Id { get; set; }
     public Age Age { get; set; }
     public string FirstName { get; set; }
+
+    public int a { get; set; }
+    public int b { get; set; }
+
+    public void PrintFullName()
+    {
+        Console.WriteLine($"{FirstName} {LastName}");
+    }
+
+    public void PrintAge()
+    {
+        Console.WriteLine($"{Age.YearsOld} years old");
+    }
+
+    public void Multiply()
+    {
+        Console.WriteLine(a * b);
+    }
 
     // propiedades adicionales
     public int EmployeeId { get; set; }
@@ -33,7 +57,7 @@ public class Manager : Employee, IPerson
     public int NumberOfDirectReports { get; set; }
 }
 
-//Structs - es un Value Type, si tengo una referencia esta es hacia al objeto mismo
+//Structs - son un Value Type, si tengo una referencia esta es hacia al objeto mismo
 //Su comportamiento entra en juego cuando se usan variables y como estas se pasan desde y hacia metodos
 public struct Age
 {
@@ -48,10 +72,19 @@ public struct VendorContact : IPerson
     public int Id { get; set; }
     public Age Age { get; set; }
     public string FirstName { get; set; }
+
+    public void PrintFullName()
+    {
+        Console.WriteLine($"{FirstName} {LastName}");
+    }
+
+    public void PrintAge() { Console.WriteLine($"{Age.YearsOld} years old"); }
 }
 
 //Structs no pueden heredar (inherit) desde un base Struct
-//public struct BiologicalAge : Age {}
+public struct BiologicalAge : Age 
+{
+}
 
 //Records (C# 9)
 //Son parecidos a las clases se comportan como clases pero se los utiliza donde quieran mantener
@@ -80,7 +113,9 @@ public record struct Order
     public DateOnly OrderDate { get; set; }
 
 }
-public record struct RecurringOrder
+public record struct RecurringOrder : Order // Record Struct no se puede heredar de otro Record Struct ni de otro Struct
 {
-
+    public int RecurringOrderId { get; set; }
+    public DateOnly NextOrderDate { get; set; }
 }
+
